@@ -1,0 +1,118 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+[class^="topzone-"], [class*="topzone-"] {
+    background-image: url(//cdn.tgdd.vn/mwgcart/topzone/images/icon-topzone.webp);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 30px;
+    width: 150px;
+    line-height: 30px;
+    vertical-align: middle;
+    background-size: 514px 226px;
+}
+
+.cart {
+    display: inline-block;
+    vertical-align: middle;
+    background: #2f3033;
+    border-radius: 100%;
+    padding: 10px;
+    margin: 0 0 0 10px;
+    position: relative;
+    height: 40px;
+    width: 40px;
+}
+
+
+.topzone-cart {
+    background-position: -239px -11px;
+    width: 14px;
+    height: 17px;
+}
+.cart i {
+    display: block;
+    margin: 2px auto;
+}
+
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    min-width: 1024px;
+    margin: auto;
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+.logo-topzone {
+    float: left;
+    margin-left: 6%;
+    transition: opacity .1s cubic-bezier(.645,.045,.355,1);
+}
+.topzone-search {
+    background-position: -187px -11px;
+    width: 18px;
+    height: 18px;
+}
+.search-sp {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    cursor: pointer;
+    background: #2f3033;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+}
+.search-sp .topzone-search {
+    display: block;
+    margin: 2px auto;
+}
+@media only screen and (min-width: 768px) { /*SCREEN >= 768px*/
+    #search-cart {
+        font-size: 0 !important; /*hide the text using font-size*/
+    }
+    .logo {
+        width:30%;
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (max-width: 768px) { /*SCREEN <= 768px*/
+    .search-cart {
+        display: none !important; /*hide the text using font-size*/
+    }
+    #search-cart {
+        font-size: 16px !important; hide the text using font-size
+    }
+    .logo{
+        width:65%;
+        justify-content: center;
+    }
+}
+.Iphone {
+    overflow-wrap: break-word;
+}
+

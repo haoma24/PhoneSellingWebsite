@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Cửa hàng điện thoại chính hãng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-md bg-black navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="logo">
+                <a class="navbar-brand-md" runat="server" href="~/"><i style="width:185px" class="topzone-logo"></i></a>
+            </div>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="mx-2" nav-item><a class="nav-link text-decoration-none active" runat="server" href="~/">Iphone</a></li>
+                    <li class="mx-2" nav-item><a class="nav-link text-decoration-none active" runat="server" href="~/">Mac</a></li>
+                    <li class="mx-2" nav-item><a class="nav-link text-decoration-none active" runat="server" href="~/">Ipad</a></li>
+                    <li class="mx-2" nav-item><a class="nav-link text-decoration-none active" runat="server" href="~/">Watch</a></li>
+                    <li class="mx-2" nav-item><a id="search-cart" class="nav-link text-decoration-none active" runat="server" href="~/">Tìm kiếm</a></li>
+                    <li class="mx-2" nav-item><a id="search-cart" class="nav-link text-decoration-none active" runat="server" href="~/">Giỏ hàng</a></li>
+                </ul>
+            </div>
+            <div class="float-end search-cart">
+                <form class="d-flex float-start position-relative">
+                    <div class="search-sp">
+                        <i class="topzone-search"></i>
+                    </div>
+                </form>
+                <a href="@Url.Action("GioHang","Home")" class="cart position-relative">
+                    <i class="topzone-cart"></i>
+                </a>
+                <a href="@Url.Action("DangNhap","Home")" class="cart">
+                    <i class="ps-1 text-white fa fa-user-o" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="d-none spinner-grow text-light"></div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Topzone - Đại lý Apple chính hãng</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

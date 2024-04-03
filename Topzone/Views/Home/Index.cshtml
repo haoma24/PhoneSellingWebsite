@@ -1,0 +1,26 @@
+﻿@model IEnumerable<TOPZONE.SanPham>
+@{
+    ViewBag.Title = "Trang chủ";
+}
+
+<main class="bg-light">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+                <img style="border-radius:5px; width:100%" src="~/Content/Slider_1.png" alt="Slider">
+            </div>
+        </div>
+    </div>
+    <!-- PRODUCT -->
+    <div class="Iphone d-flex flex-wrap justify-content-evenly mt-5">
+        @foreach (var item in Model)
+        {
+            <div class="ip-item m-1 w-25 popover align-content-center justify-content-center p-3">
+                <div class="item-img align-content-center justify-content-center d-flex p-1"><img style="width:100%" src="@Html.DisplayFor(modelItem => item.Hinh)" /></div>
+                <div class="item-name text-center">@Html.DisplayFor(modelItem => item.TenSP)</div>
+                <div class="item-price text-center">@Html.DisplayFor(modelItem => item.GiaBan)</div>
+                <div class="item-btn align-content-center justify-content-center d-flex p-2">@Html.ActionLink("Đặt ngay", "OrderNow", "ShoppingCart", new { id = item.MaSP }, new { @class = "btn btn-default" })</div>
+            </div>
+        }
+    </div>
+</main>
