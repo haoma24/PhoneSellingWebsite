@@ -15,11 +15,11 @@
     <div class="Iphone d-flex flex-wrap justify-content-evenly mt-5">
         @foreach (var item in Model)
         {
-            <div class="ip-item m-1 w-25 popover align-content-center justify-content-center p-3">
-                <div class="item-img align-content-center justify-content-center d-flex p-1"><img style="width:100%" src="@Html.DisplayFor(modelItem => item.Hinh)" /></div>
-                <div class="item-name text-center">@Html.DisplayFor(modelItem => item.TenSP)</div>
-                <div class="item-price text-center">@Html.DisplayFor(modelItem => item.GiaBan)</div>
-                <div class="item-btn align-content-center justify-content-center d-flex p-2">@Html.ActionLink("Đặt ngay", "OrderNow", "ShoppingCart", new { id = item.MaSP }, new { @class = "btn btn-default" })</div>
+            <div class="ip-item m-1 w-25 popover align-content-center justify-content-center p-1">
+                <div class="item-img align-content-center justify-content-center d-flex"><img style="width:100%" src="@Html.DisplayFor(modelItem => item.Hinh)" /></div>
+                <div class="item-name w-100 d-flex mt-2 justify-content-center">@Html.DisplayFor(modelItem => item.TenSP)</div>
+                <div class="item-price w-100 d-flex mt-2 justify-content-center">@Html.DisplayFor(modelItem => item.GiaBan)</div>
+                <div class="item-btn align-content-center justify-content-center d-flex">@Html.ActionLink("Đặt ngay", "OrderNow", "ShoppingCart", new { id = item.MaSP }, new { @class = "btn btn-default" })</div>
             </div>
         }
     </div>

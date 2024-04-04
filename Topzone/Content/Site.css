@@ -89,7 +89,7 @@ textarea {
     display: block;
     margin: 2px auto;
 }
-@media only screen and (min-width: 768px) { /*SCREEN >= 768px*/
+@media only screen and (min-width: 992px) { /*SCREEN >= px*/
     #search-cart {
         font-size: 0 !important; /*hide the text using font-size*/
     }
@@ -100,7 +100,7 @@ textarea {
 
 }
 
-@media only screen and (max-width: 768px) { /*SCREEN <= 768px*/
+@media only screen and (max-width: 992px) { /*SCREEN <= px*/
     .search-cart {
         display: none !important; /*hide the text using font-size*/
     }
@@ -110,6 +110,14 @@ textarea {
     .logo{
         width:65%;
         justify-content: center;
+    }
+    .ip-item {
+        font-size: 11px !important;
+        padding: 5px !important;
+        width: 45% !important;
+    }
+    .item-btn a{
+        font-size:11px;
     }
 }
 .Iphone {
